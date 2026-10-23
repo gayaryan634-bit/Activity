@@ -1,0 +1,24 @@
+public class Main {
+    public static void main(String[] args) {
+        byte num = 127;
+        num++;
+        System.out.println("Overflow: " + num);
+
+        String a = new String("Hello");
+        String b = new String("Hello");
+        String c = "Hello";
+
+        System.out.println(a == b);
+        System.out.println(a.equals(b));
+        System.out.println(a == c);
+        System.out.println(b.equals(c));
+
+        // == compares references, while equals() compares text.
+
+        int[] x = {1, 2, 3};
+        int[] y = x;
+
+        y[0] = 10;
+        System.out.println(x[0]);
+    }
+}
