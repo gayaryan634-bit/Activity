@@ -1,0 +1,21 @@
+public class Main {
+    public static void main(String[] args) {
+        double purchaseAmount = 1500;
+        double discount;
+
+        if (purchaseAmount >= 5000) {
+            discount = 0.15;
+        } else if (purchaseAmount >= 3000) {
+            discount = 0.10;
+        } else if (purchaseAmount >= 1000) {
+            discount = 0.05;
+        } else {
+            discount = 0.0;
+        }
+
+        double total = purchaseAmount - (purchaseAmount * discount);
+
+        System.out.println("Discount: " + (discount * 100) + "%");
+        System.out.println("Final Price: " + total);
+    }
+}
