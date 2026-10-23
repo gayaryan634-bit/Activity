@@ -1,0 +1,20 @@
+public class Main {
+    public static void main(String[] args) {
+        int a = 5;
+        int b = 3;
+        int x = 2;
+
+        // PREDICTED: true
+        System.out.println(a + b * 2 > 10 && x < 5);
+        // Actual: true
+
+        // PREDICTED: true
+        System.out.println(++a > 5 || b-- < 3);
+        // Actual: true
+
+        // PREDICTED: false
+        System.out.println(a * 2 == 12 && b++ > 3);
+        // Actual: true
+        // Multiplication happens before comparison, and && checks both conditions only if the first is true.
+    }
+}
