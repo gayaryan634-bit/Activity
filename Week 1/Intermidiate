@@ -1,0 +1,15 @@
+public class Main {
+    public static void main(String[] args) {
+        int quantity = 3;
+        double unitPrice = 25.50;
+        String storeName = "SM Store";
+
+        // totalCost should be double to keep decimal values.
+        double totalCost = quantity * unitPrice;
+
+        System.out.println("Store: " + storeName);
+        System.out.println("Quantity: " + quantity);
+        System.out.println("Unit Price: " + unitPrice);
+        System.out.println("Total Cost: " + totalCost);
+    }
+}
