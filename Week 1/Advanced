@@ -1,0 +1,21 @@
+public class Main {
+    public static void main(String[] args) {
+        double cm = 250.5;
+
+        int meters = (int) (cm / 100);
+        double remainingCm = cm - (meters * 100);
+
+        System.out.println("Meters: " + meters);
+        System.out.println("Remaining cm: " + remainingCm);
+
+        int number = 10;
+        double widened = number;
+        // No cast needed because double can store an int.
+        System.out.println("Widening: " + widened);
+
+        double value = 15.75;
+        int narrowed = (int) value;
+        // Decimal part .75 is lost.
+        System.out.println("Narrowing: " + narrowed);
+    }
+}
