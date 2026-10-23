@@ -1,0 +1,30 @@
+import java.util.Arrays;
+
+public class Main {
+    public static void main(String[] args) {
+
+        int[] scores = {85, 70, 95, 60, 80};
+        int target = 95;
+        boolean found = false;
+
+        // Linear search
+        for (int i = 0; i < scores.length; i++) {
+            if (scores[i] == target) {
+                System.out.println("Found at index: " + i);
+                found = true;
+                break;
+            }
+        }
+
+        if (!found) {
+            System.out.println("Score not found.");
+        }
+
+        // Sort a copy to keep the original array unchanged.
+        int[] sortedScores = Arrays.copyOf(scores, scores.length);
+        Arrays.sort(sortedScores);
+
+        System.out.println("Original: " + Arrays.toString(scores));
+        System.out.println("Sorted: " + Arrays.toString(sortedScores));
+    }
+}
